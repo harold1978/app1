@@ -1,6 +1,8 @@
-<nav class="navbar navbar-expand-sm navbar-light bg-primary">
+<nav class="navbar navbar-expand-sm navbar-light bg-danger">
   <div class="container">
-    <a class="navbar-brand" href="#">img</a>
+    <a class="navbar-brand tLogo" routerLink="/"
+      ><img src="logoIzquierdo2.png" class="rounded img-fluid" alt="logo"
+    /></a>
     <button
       class="navbar-toggler d-lg-none"
       type="button"
@@ -14,17 +16,20 @@
     </button>
     <div class="collapse navbar-collapse" id="collapsibleNavId">
       <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+
+
         <li class="nav-item">
-          <a class="nav-link active" routerLink="/" aria-current="page"
-            >Home <span class="visually-hidden">(current)</span></a
-          >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="pollos">Galpones</a>
+          <a class="nav-link"  routerLinkActive="menuActivo" routerLink="/pollos">Galpones</a>  
         </li>
 
+        <li class="nav-item">
+          <a class="nav-link"  routerLinkActive="menuActivo" routerLink="/gastos">Gastos</a>  
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link"  routerLinkActive="menuActivo" routerLink="/muertes">Muertes</a>  
+        </li>
       </ul>
-     
     </div>
   </div>
 </nav>
