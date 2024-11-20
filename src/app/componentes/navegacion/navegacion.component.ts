@@ -10,9 +10,5 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   styleUrl: './navegacion.component.css'
 })
 export class NavegacionComponent {
- activo = signal<string>('nav-link active');
- opmenu = signal<number>(0);
- cambioMenu(item:number):void{
-  
- }
+
 }
