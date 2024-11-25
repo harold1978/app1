@@ -1,12 +1,12 @@
 import { Component, EventEmitter, Input, Output, input, signal } from '@angular/core';
 import {FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { Muerte } from '../../../paginas/interfaces/muerte';
-import { JsonPipe } from '@angular/common';
+
 
 @Component({
   selector: 'app-frmmuertes',
   standalone: true,
-  imports: [ReactiveFormsModule,JsonPipe],
+  imports: [ReactiveFormsModule],
   templateUrl: './frmmuertes.component.html',
   styleUrl: './frmmuertes.component.css'
 })
