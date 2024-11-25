@@ -1,0 +1,46 @@
+<div class="container card mt-2 p-3 bg-info">
+    <form [formGroup]="itemForm()" class="row">
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <label for="Id" class="col-form-label">ID</label>
+            <div>
+                <input  formControlName="Id" type="text" class="form-control" name="Id" id="Id" placeholder="ID"/>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <label for="IdCamada" class="col-form-label">ID CAMADA</label>
+            <div>
+                <input formControlName="IdCamada" type="number" class="form-control" name="IdCamada" id="IdCamada" placeholder="NUMERO DE CAMADA"/>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <label for="Cantidad" class="col-form-label">CANTIDAD</label>
+            <div>
+                <input formControlName="Cantidad" type="number" class="form-control" name="Cantidad" id="Cantidad" placeholder="CANTIDAD"/>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <label for="Motivo" class="col-form-label">MOTIVO</label>
+            <div>
+                <input formControlName="Motivo" type="text" class="form-control" name="Motivo" id="Motivo" placeholder="MOTIVO"/>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <label for="Fecha" class="col-form-label">FECHA</label>
+            <div>
+                <input formControlName="Fecha" type="date" class="form-control" name="Fecha" id="Fecha" placeholder="FECHA"/>
+            </div>
+        </div>
+
+        <div>
+            <div class="col-12 mt-3">
+                <button (click)="emitirAgregarDato()" class="btn btn-primary">
+                    Action
+                </button>
+            </div>
+        </div>
+    </form>
+</div> 
+
+
+

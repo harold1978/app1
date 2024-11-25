@@ -1,1 +1,45 @@
-<p>muertes works!</p>
+<section class="mt-1">
+  
+<button (click)="muestra.set(!muestra())" type="button" class="btn btn-primary btn-sm">AGREGAR</button>
+
+@if (muestra()) {
+  {{muestra()}}
+  <app-frmmuertes [muertesSignal]="muertesSignal()" (agregar)="agregarDato($event)" />
+
+}
+
+ <div>
+  <h3>Lista de muertes de pollitos</h3>
+  <div class="table-responsive">
+    <table
+      class="table table-sm table-hover table-borderless table-primary align-middle"
+    >
+      <thead class="table-light">
+
+        <tr>
+          <th>ID</th>
+          <th>CAMADA</th>
+          <th>CANTIDAD</th>
+          <th>MOTIVO</th>
+          <th>FECHA</th>
+          <th>COMANDO</th>
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+        @for (item of muertesSignal(); track $index) {
+        <tr class="table-primary">
+          <td scope="row">{{ item.Id }}</td>
+          <td>{{ item.IdCamada }}</td>
+          <td>{{ item.Cantidad }}</td>
+          <td>{{ item.Motivo }}</td>
+          <td>{{ item.Fecha ? (item.Fecha|date:"dd/MM/yyyy") : 'fecha no disponible' }}</td>
+          <td><button class="btn btn-outline-danger btn-sm" (click)="deleteItem(item.Id)">Eliminar</button></td>
+        </tr>
+        }
+      </tbody>
+      <tfoot></tfoot>
+    </table>
+  </div>
+</div> 
+
+</section><!-- items.component.html -->
