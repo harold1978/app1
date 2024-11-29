@@ -49,6 +49,8 @@ export class FrmmuertesComponent {
     emitirAgregarDato() {
       //const nuevoDato: Muerte = { id: this.datos.length + 1, nombre: 'Carlos' };
       this.agregar.emit(this.nuevoDato()!);
+      this.itemForm().reset();
+      
     }
 
 }

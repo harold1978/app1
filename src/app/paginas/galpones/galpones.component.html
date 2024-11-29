@@ -1,1 +1,8 @@
-<p>galpones works!</p>
+
+<div>
+    <button (click)="muestrafrm()" type="button" class="btn btn-primary btn-sm mt-3">FORMULARIO</button>
+    @if(muestra()){
+        <app-frmgalpones/>
+    }
+    <app-listgalpones/>
+</div>
